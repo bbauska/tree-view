@@ -10,93 +10,10 @@
 
     <title>Tree-View Diagram</title>
     
-    <link href="../css/styles.css" rel="stylesheet" media="screen" />
+    <link href="/css/styles.css" rel="stylesheet" media="screen" />
     <link href='https://fonts.googleapis.com/css?family=Armata' rel='stylesheet' type='text/css'>
   
 <head>
-<style>
-/** styles.css from tree-view.bauska.org */
-body {
-  font-family: Calibri, Segoe, "Segoe UI", "Gill Sans", "Gill Sans MT", sans-serif;
-}
-p {
-  margin-left: 15px;
-}
-/* It's supposed to look like a tree diagram */
-.tree, .tree ul, .tree li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
-
-.tree {
-  margin: 0 0 1em;
-  text-align: center;
-}
-.tree, .tree ul {
-  display: table;
-}
-.tree ul {
-  width: 100%;
-}
-.tree li {
-  display: table-cell;
-  padding: .5em 0;
-  vertical-align: top;
-}
-/* _________ */
-.tree li:before {
-  outline: solid 1px #666;
-  content: "";
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-.tree li:first-child:before {left: 50%;}
-.tree li:last-child:before {right: 50%;}
-
-.tree code, .tree span {
-  border: solid .1em #666;
-  border-radius: .2em;
-  display: inline-block;
-  margin: 0 .2em .5em;
-  padding: .2em .5em;
-  position: relative;
-}
-/* If the tree represents DOM structure */
-.tree code {
-  font-family: monaco, Consolas, 'Lucida Console', monospace;
-}
-
-/* | */
-.tree ul:before,
-.tree code:before,
-.tree span:before {
-  outline: solid 1px #666;
-  content: "";
-  height: .5em;
-  left: 50%;
-  position: absolute;
-}
-.tree ul:before {
-  top: -.5em;
-}
-.tree code:before,
-.tree span:before {
-  top: -.55em;
-}
-
-/* The root node doesn't connect upwards */
-.tree > li {margin-top: 0;}
-.tree > li:before,
-.tree > li:after,
-.tree > li > code:before,
-.tree > li > span:before {
-  outline: none;
-}
-</style>
 </head>
 <body>
   <p class="codepen" data-height="100" data-default-tab="html,result" data-slug-hash="raVXGWO" data-pen-title="treeView" 
@@ -105,101 +22,102 @@ p {
   <span>See the Pen <a href="https://codepen.io/BBauska/pen/raVXGWO">
   treeView</a> by Brian Bauska (<a href="https://codepen.io/BBauska">@BBauska</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://public.codepenassets.com/embed/index.js"></script>
-<!-- /tree-vew/index.html from codepen.io's tree view from unordered list -->
-<figure>
-  <figcaption>Example DOM structure diagram</figcaption>
-  <ul class="tree">
-    <li><code>html</code>
-      <ul>
-        <li><code>head</code>
-          <ul>
-            <li><code>title</code></li>
-          </ul>
-        </li>
-        <li><code>body</code>
-          <ul>
-            <li><code>header</code>
-              <ul>
-                <li><code>h1</code></li>
-                <li><code>p</code></li>
-              </ul>
-            </li>
-            <li><code>nav</code>
-              <ul>
-                <li><code>a</code></li>
-                <li><code>a</code></li>
-                <li><code>a</code></li>
-                <li><code>a</code></li>
-              </ul>
-                        </li>
-                        <li><code>main</code>
-                            <ul>
-                                <li><code>h1</code></li>
-                                <li><code>article</code>
-                                    <ul>
-                                        <li><code>h2</code></li>
-                                        <li><code>p</code></li>
-                                        <li><code>p</code></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><code>aside</code>
-                            <ul>
-                                <li><code>h2</code></li>
-                                <li><code>p</code></li>
-                                <li><code>p</code>
-                                    <ul>
-                                        <li><code>a</code></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><code>footer</code>
-                            <ul>
-                                <li><code>nav</code>
-                                    <ul>
-                                        <li><code>a</code></li>
-                                        <li><code>a</code></li>
-                                        <li><code>a</code></li>
-                                        <li><code>a</code></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
+  </p>
+  <script async src="https://public.codepenassets.com/embed/index.js"></script>
+  <!-- /tree-vew/index.html from codepen.io's tree view from unordered list -->
+  <figure>
+    <figcaption>Example DOM structure diagram</figcaption>
+    <ul class="tree">
+      <li><code>html</code>
+        <ul>
+          <li><code>head</code>
+            <ul>
+              <li><code>title</code></li>
             </ul>
+          </li>
+          <li><code>body</code>
+            <ul>
+              <li><code>header</code>
+                <ul>
+                  <li><code>h1</code></li>
+                  <li><code>p</code></li>
+                </ul>
+              </li>
+              <li><code>nav</code>
+                <ul>
+                  <li><code>a</code></li>
+                  <li><code>a</code></li>
+                  <li><code>a</code></li>
+                  <li><code>a</code></li>
+                </ul>
+              </li>
+              <li><code>main</code>
+                <ul>
+                  <li><code>h1</code></li>
+                  <li><code>article</code>
+                    <ul>
+                      <li><code>h2</code></li>
+                      <li><code>p</code></li>
+                      <li><code>p</code></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><code>aside</code>
+                <ul>
+                  <li><code>h2</code></li>
+                  <li><code>p</code></li>
+                  <li><code>p</code>
+                <ul>
+              <li><code>a</code></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><code>footer</code>
+        <ul>
+          <li><code>nav</code>
+            <ul>
+              <li><code>a</code></li>
+              <li><code>a</code></li>
+              <li><code>a</code></li>
+              <li><code>a</code></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
         </li>
     </ul>
 </figure>
+
 <figure>
-    <figcaption>Example Bauska Website</figcaption>
-    <ul class="tree">
-        <li><span>Home</span>
-            <ul>
-                <li><span>About us</span>
-                    <ul>
-                        <li><span>Our history</span>
-                            <ul>
-                              <li><span>Founder</span>
+  <figcaption>Example Bauska Website</figcaption>
+  <ul class="tree">
+    <li><span>Home</span>
+      <ul>
+        <li><span>About us</span>
+          <ul>
+            <li><span>Our history</span>
+              <ul>
+                <li><span>Founder</span>
                   <ul>
                     <li><span>Brian A Bauska, G'pa</span></li>
                   </ul>
                  </li>
-                            </ul>
-                        </li>
-                        <li><span>Board of websites</span>
-                            <ul>
-                              <li><span>Cellardoor.bauska.org</span></li>
-                              <li><span>SayHello.bauska.org</span></li>
-                              <li><span>BriansBlog.bauska.org</span></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
+              </ul>
+            </li>
+            <li><span>Board of websites</span>
+              <ul>
+                <li><span>Cellardoor.bauska.org</span></li>
+                <li><span>SayHello.bauska.org</span></li>
+                <li><span>BriansBlog.bauska.org</span></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
         <li><span>Our products</span>
           <ul>
             <li><span>Silus Gaming World™</span>
